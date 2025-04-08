@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Control de Cajas</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+</head>
+<body>
+  <h1>📦 Control de Cajas</h1>
+
+  <label>ID Caja:</label>
+  <input type="text" id="idCaja" placeholder="Escanea o escribe el ID">
+  <button onclick="iniciarEscaneo()">📷 Escanear QR</button><br><br>
+
+  <label>Contenido:</label>
+  <input type="text" id="contenido"><br>
+
+  <label>Destino:</label>
+  <input type="text" id="destino"><br>
+
+  <label>Ubicación (pasillo/zona):</label>
+  <input type="text" id="ubicacion"><br>
+
+  <button onclick="escanearCaja()">Registrar Caja</button>
+  <button onclick="nuevaBusqueda()">Nueva Búsqueda</button>
+  <button onclick="buscarCaja()">Buscar</button>
+
+  <h3>📌 Estado Actual</h3>
+  <p id="estadoActual">Sin escanear</p>
+
+  <div id="infoCaja"></div>
+  <div id="historialID"></div>
+
+  <h3>📜 Historial General</h3>
+  <ul id="historial"></ul>
+
+  <div id="reader" style="width:100%; max-width:300px;"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
